@@ -1,4 +1,3 @@
-import { isNgTemplate } from '@angular/compiler';
 import { ListService } from '../../services/list.service';
 import { Component, OnInit} from '@angular/core';
 
@@ -22,10 +21,6 @@ export class ListComponent implements OnInit {
     this.lists = this.listService.getTitle();
     this.certifier = this.listService.getButtonCertifier();
   }
-
-  // onSearch(text, lists) {
-  //   this.lists = this.listService.onSearch(text, lists)
-  // }
 
   onFilter(list, text) {
     console.log(list, text)

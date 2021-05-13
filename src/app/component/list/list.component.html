@@ -4,7 +4,7 @@
 </div>
 <carousel style="height: 30px; margin-top: 20px;">
     <div *ngFor="let list of certifier" class="carousel-cell">
-        <button [ngClass]="{active: list === filtered}"  (click)="onFilter(list, text)" *ngIf="list" class=" btns ">{{list}}</button>
+        <button [ngClass]="{active: list === filtered}"  (click)="onFilter(list, text)" class=" btns ">{{list}}</button>
     </div>
 </carousel>
 <div class="listCon">

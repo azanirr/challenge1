@@ -33,8 +33,4 @@ export class ListService {
     return filtered
     
   }
-  // onSearch(text, lists) {
-  //   let filtered = title.filter(el => el?.short_name.includes(text.toUpperCase()) || el?.short_name.includes(text.toLowerCase()))
-  //   return filtered
-  // }
 }
