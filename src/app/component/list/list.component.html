@@ -1,0 +1,21 @@
+<div class="searchCon">
+    <input type="text" [(ngModel)]="text" (change)="onFilter(filtered, text)">
+    <button (click)="onFilter(filtered, text)">Search</button>
+</div>
+<carousel style="height: 30px; margin-top: 20px;">
+    <div *ngFor="let list of certifier" class="carousel-cell">
+        <button [ngClass]="{active: list === filtered}"  (click)="onFilter(list, text)" *ngIf="list" class=" btns ">{{list}}</button>
+    </div>
+</carousel>
+<div class="listCon">
+    <div *ngFor="let list of lists">
+        <h1>{{list?.short_name}}</h1>
+        <hr>
+        <p>{{list?.long_name}}</p>
+        <p style="margin: 10px 0;">Level {{list?.rncp_level}}</p>
+        <p>{{list?.certifier?.short_name}}</p>
+        <i *ngIf="list.is_published" class="fas fa-circle" style="font-size: 6px; margin-top: 10px; color: #42ba96;"></i>
+        <i *ngIf="!list.is_published" class="fas fa-circle" style="font-size: 6px; margin-top: 10px; color: #df4759"></i>
+    </div>
+</div>
+    
